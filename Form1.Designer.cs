@@ -72,8 +72,6 @@
             tboxLesson1Start7 = new TextBox();
             btnGenerateTimeTable1 = new Button();
             errorProvider1 = new ErrorProvider(components);
-            chooseButton = new Button();
-            btnStartAutoRing = new Button();
             label19 = new Label();
             cbox2break7 = new ComboBox();
             tboxLesson2End7 = new TextBox();
@@ -124,8 +122,8 @@
             cbox2Tuesday = new CheckBox();
             cbox2Monday = new CheckBox();
             toolTip1 = new ToolTip(components);
-            button1 = new Button();
-            info = new Label();
+            btnGenerateTimeTable2 = new Button();
+            lblInfo = new Label();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -479,26 +477,6 @@
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
-            // 
-            // chooseButton
-            // 
-            chooseButton.Location = new Point(48, 547);
-            chooseButton.Name = "chooseButton";
-            chooseButton.Size = new Size(261, 45);
-            chooseButton.TabIndex = 43;
-            chooseButton.Text = "Test the sound";
-            chooseButton.UseVisualStyleBackColor = true;
-            chooseButton.Click += chooseButton_Click;
-            // 
-            // btnStartAutoRing
-            // 
-            btnStartAutoRing.Location = new Point(48, 467);
-            btnStartAutoRing.Name = "btnStartAutoRing";
-            btnStartAutoRing.Size = new Size(202, 52);
-            btnStartAutoRing.TabIndex = 44;
-            btnStartAutoRing.Text = "Стартирай автоматичен звънец";
-            btnStartAutoRing.UseVisualStyleBackColor = true;
-            btnStartAutoRing.Click += btnStartAutoRing_Click;
             // 
             // label19
             // 
@@ -958,25 +936,27 @@
             // 
             toolTip1.ForeColor = SystemColors.HotTrack;
             // 
-            // button1
+            // btnGenerateTimeTable2
             // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(515, 373);
-            button1.Name = "button1";
-            button1.Size = new Size(263, 72);
-            button1.TabIndex = 94;
-            button1.Text = "Генерирай разписание втора смяна";
-            toolTip1.SetToolTip(button1, "За да генерирате разписание е нужно \r\nда въведете начало и край за първи час,\r\nкакто и всички междучасия.");
-            button1.UseVisualStyleBackColor = false;
+            btnGenerateTimeTable2.BackColor = SystemColors.ActiveCaption;
+            btnGenerateTimeTable2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGenerateTimeTable2.Location = new Point(515, 373);
+            btnGenerateTimeTable2.Name = "btnGenerateTimeTable2";
+            btnGenerateTimeTable2.Size = new Size(263, 72);
+            btnGenerateTimeTable2.TabIndex = 94;
+            btnGenerateTimeTable2.Text = "Генерирай разписание втора смяна";
+            toolTip1.SetToolTip(btnGenerateTimeTable2, "За да генерирате разписание е нужно \r\nда въведете начало и край за първи час,\r\nкакто и всички междучасия.");
+            btnGenerateTimeTable2.UseVisualStyleBackColor = false;
+            btnGenerateTimeTable2.Click += btnGenerateTimeTable2_Click;
             // 
-            // info
+            // lblInfo
             // 
-            info.Location = new Point(387, 460);
-            info.Name = "info";
-            info.Size = new Size(542, 132);
-            info.TabIndex = 95;
-            info.Text = "Error label";
+            lblInfo.BackColor = SystemColors.Control;
+            lblInfo.Location = new Point(48, 460);
+            lblInfo.Name = "lblInfo";
+            lblInfo.Size = new Size(806, 132);
+            lblInfo.TabIndex = 95;
+            lblInfo.Text = "Info";
             // 
             // Form1
             // 
@@ -984,8 +964,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(980, 604);
-            Controls.Add(info);
-            Controls.Add(button1);
+            Controls.Add(lblInfo);
+            Controls.Add(btnGenerateTimeTable2);
             Controls.Add(cbox2Friday);
             Controls.Add(cbox2Thursday);
             Controls.Add(cbox2Wednesday);
@@ -1035,8 +1015,6 @@
             Controls.Add(label34);
             Controls.Add(label35);
             Controls.Add(label36);
-            Controls.Add(btnStartAutoRing);
-            Controls.Add(chooseButton);
             Controls.Add(btnGenerateTimeTable1);
             Controls.Add(label18);
             Controls.Add(cbox1break7);
@@ -1080,7 +1058,7 @@
             Controls.Add(lblClock);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Ring Bell PMG-GRE";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
@@ -1130,10 +1108,7 @@
         private TextBox tboxLesson1End7;
         private TextBox tboxLesson1Start7;
         private Button btnGenerateTimeTable1;
-  //      private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
-        private Button chooseButton;
         private ErrorProvider errorProvider1;
-        private Button btnStartAutoRing;
         private Label label19;
         private ComboBox cbox2break7;
         private TextBox tboxLesson2End7;
@@ -1184,7 +1159,7 @@
         private CheckBox cbox2Tuesday;
         private CheckBox cbox2Monday;
         private ToolTip toolTip1;
-        private Button button1;
-        private Label info;
+        private Button btnGenerateTimeTable2;
+        private Label lblInfo;
     }
 }

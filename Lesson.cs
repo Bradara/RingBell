@@ -18,10 +18,10 @@ namespace RingBell
         {
             HourStart = hourStart;
             MinutesStart = minutesStart;
-            TimeStart = hourStart + ":" + minutesStart;
+            TimeStart = hourStart + ":" + minutesStart.ToString("00");
             HourEnd = hourEnd;
             MinutesEnd = minutesEnd;
-            TimeEnd = hourEnd + ":" + minutesEnd;
+            TimeEnd = hourEnd + ":" + minutesEnd.ToString("00");
             Break = @break;
             duration = (HourEnd * 60 + MinutesEnd) - (HourStart * 60 + MinutesStart);
         }

@@ -1,0 +1,39 @@
+﻿Product Description
+Features:
+1.Working Temperature: -20°C to +70°C 2. Board Size and Weight:
+1-Channel Module : 61x16 x 17 mm(LWH) / 15 Grams 2-Channel Module : 47 x 33 x17 mm(LWH) / 25 Grams 4-Channel Module : 65 x 47 x 17 mm (LWH) / 50 Grams 8-Channel Module : 80 x 75 x17 mm (LWH) / 98.5 Grams
+Hardware introduction and description
+Board Interface Description:
+COM1: 1-channel common port;
+NC1: 1-channel normally closed port;
+NO1: 1-channel normally open port .
+.... COM8: 8-channel common port;
+NC8: 8-channel normally closed port;
+NO8: 8-channel normally open port .
+
+VID and PID number of the relay's module:
+VID: 5131
+PID: 2007
+Generally, it is a fixed value and does not need to be changed.
+
+Communication protocol description:
+Default communication baud rate: 9600BPS
+Turn on the 1-channel relay switch: A0 01 01 A2
+Turn off the 1-channel relay switch: A0 01 00 A1
+Turn on the 2-channel relay switch: A0 02 01 A3
+Turn off the 2-channel relay switch: A0 02 00 A2
+Turn on the 3-channel relay switch: A0 03 01 A4
+Turn off the 3-channel relay switch: A0 03 00 A3
+......
+Turn on the 8-channel relay switch: A0 08 01 A9
+Turn off the 8-channel relay switch: A0 08 00 A8
+This series of HID relay devices cannot query the relay status by entering the code "0xFF".
+
+USB switch communication protocol
+Data (1) --- start flag (default is 0xA0)
+Data (2) --- switch address codes (0x01 and 0x02 represent the first and second switches, respectively)
+Data (3) --- operating data (0x00 is "off", 0x01 is "on")
+Data (4) --- check code
+
+Package Included:
+1pcs NOYITO HID Drive-free USB Computer Control Switch Relay Module
